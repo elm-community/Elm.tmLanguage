@@ -165,6 +165,8 @@ def load_from_oracle(filename):
     """
     global LOOKUPS
     project = ElmProject(filename)
+    if project.working_dir is None:
+        return
     os.chdir(project.working_dir)
 
     # Hide the console window on Windows
@@ -203,6 +205,10 @@ def view_load(view):
     """
     Selectively calls load_from_oracle based on the current scope.
     """
+
+    if view.file_name() is None:
+        return;
+
     sel = view.sel()[0]
     region = join_qualified(view.word(sel), view)
     scope = view.scope_name(region.b)
