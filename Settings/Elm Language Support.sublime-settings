@@ -1,8 +1,9 @@
 {
     "debug": false,
-	"enabled": true,
-	"elm_docs_path": "docs.json",
-	"elm_format_on_save": true,
-	"elm_format_filename_filter": "",
-	"elm_paths": ""
+    "enabled": true,
+    "elm_docs_path": "docs.json",
+    "elm_format_binary": "elm-format",
+    "elm_format_on_save": true,
+    "elm_format_filename_filter": "",
+    "elm_paths": ""
 }
