@@ -44,7 +44,7 @@ def join_qualified(region, view):
 def get_word_under_cursor(view):
     sel = view.sel()[0]
     region = join_qualified(view.word(sel), view)
-    return view.substr(region).strip()     
+    return view.substr(region).strip()
 
 def get_type(view, panel):
     """
@@ -100,7 +100,7 @@ def search_and_set_status_message(filename, query, panel, tries):
                 # remove first four spaces on each line from code blocks
                 panel_output = re.sub('\n {4}', '\n', panel_output)
                 panel.run_command('append', {'characters': panel_output})
-        return None    
+        return None
 
 def get_matching_names(filename, prefix):
     """
@@ -129,8 +129,8 @@ def get_matching_names(filename, prefix):
         return None
     else:
         data = LOOKUPS[filename]
-        completions = {(v['fullName'] + '\t' + v['signature'], skip_chars(v['fullName'])) 
-            for v in data 
+        completions = {(v['fullName'] + '\t' + v['signature'], skip_chars(v['fullName']))
+            for v in data
             if v['fullName'].startswith(prefix) or v['name'].startswith(prefix)}
         return [[v[0], v[1]] for v in completions]
 
@@ -147,8 +147,8 @@ def explore_package(filename, package_name):
                 return None
             else:
                 open_in_browser(items[i][3])
-        data = [[v['fullName'], v['signature'], v['comment'], v['href']] 
-            for v in LOOKUPS[filename] 
+        data = [[v['fullName'], v['signature'], v['comment'], v['href']]
+            for v in LOOKUPS[filename]
             if v['fullName'].startswith(package_name)]
         # all items must be the same number of rows
         n = 75
@@ -156,7 +156,7 @@ def explore_package(filename, package_name):
         sublime.active_window().show_quick_panel(panel_items, lambda i: open_link(data, i))
 
 def open_in_browser(url):
-    webbrowser.open_new_tab(url)        
+    webbrowser.open_new_tab(url)
 
 def load_from_oracle(filename):
     """
@@ -165,6 +165,8 @@ def load_from_oracle(filename):
     """
     global LOOKUPS
     project = ElmProject(filename)
+    if project.working_dir is None:
+        return
     os.chdir(project.working_dir)
 
     # Hide the console window on Windows
@@ -203,6 +205,10 @@ def view_load(view):
     """
     Selectively calls load_from_oracle based on the current scope.
     """
+
+    if view.file_name() is None:
+        return;
+
     sel = view.sel()[0]
     region = join_qualified(view.word(sel), view)
     scope = view.scope_name(region.b)

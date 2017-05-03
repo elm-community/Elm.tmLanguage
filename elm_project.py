@@ -130,7 +130,7 @@ class ElmProject(object):
 
     @property
     def working_dir(self):
-        return fs.dirname(self.json_path or '')
+        return fs.dirname(self.json_path) if self.json_path else None
 
     @property
     def main_path(self):
