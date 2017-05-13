@@ -11,6 +11,7 @@
 
 - Compatible with [Sublime Text 2] and [Sublime Text 3]
 - Syntax highlighting
+- Snippets for common Elm syntax (function, `case` … `of`, `let` … `in`, etc.)
 - Autocompletions plus type signature and documentation display for all functions inside packages in your `elm-package.json` file (requires [elm-oracle](https://www.npmjs.com/package/elm-oracle), which you can install with `npm install -g elm-oracle`)
     1. Bring up the type panel with `alt+up` or through the right-click context menu
     2. Close the type panel with `alt+down`
