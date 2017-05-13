@@ -55,19 +55,19 @@
 
 Don't know Elm? Great first step!
 
-- [Official Elm Hub][]
-- [Community Forum][]
-- [Pragmatic Studio][]
-- [ElmCast][]
+- [Elm Website][]
+- [elm-discuss group][]
+- [Pragmatic Studio: Building Web Apps with Elm][pragmatic]
+- [Elm Town Podcast][]
 
-[Community Forum]: https://groups.google.com/d/forum/elm-discuss
+[elm-discuss group]: https://groups.google.com/d/forum/elm-discuss
 [Elm]: http://elm-lang.org/install
-[ElmCast]: http://elmcast.io
+[Elm Town Podcast]: https://elmtown.github.io
+[Elm Website]: http://elm-lang.org
 [Highlight Build Errors]: https://packagecontrol.io/packages/Highlight%20Build%20Errors
 [NPM]: https://nodejs.org
-[Official Elm Hub]: http://elm-lang.org
 [Package Control]: https://packagecontrol.io/installation
-[Pragmatic Studio]: https://pragmaticstudio.com/elm
+[pragmatic]: https://pragmaticstudio.com/elm
 [SublimeREPL]: https://packagecontrol.io/packages/SublimeREPL
 [Sublime Text 2]: http://www.sublimetext.com/2
 [Sublime Text 3]: http://www.sublimetext.com/3
