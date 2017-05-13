@@ -60,12 +60,6 @@ Don't know Elm? Great first step!
 - [Pragmatic Studio][]
 - [ElmCast][]
 
-## Coming Soon
-
-The following features are being worked on next:
-- Built in `elm-package` support. Install packages, open docs in the browser, and pull package stats from GitHub
-- Improved snippets to help with common patterns. Create a new Elm Architecture project or submodule with a basic skeleton in just a few keystrokes. Less manual boilerplate
-
 [Community Forum]: https://groups.google.com/d/forum/elm-discuss
 [Elm]: http://elm-lang.org/install
 [ElmCast]: http://elmcast.io
