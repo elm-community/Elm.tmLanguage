@@ -4,6 +4,8 @@
         "children":
         [{
             "id": "SublimeREPL",
+            "caption": "SublimeREPL",
+            "mnemonic": "R",
             "children":
             [
                 {
