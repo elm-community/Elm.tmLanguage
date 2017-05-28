@@ -49,8 +49,6 @@
 - Elm format automatically runs every time I save a file, but there are some files I don't want it to run on
     1. If there are certain Elm source files you don't want to automatically run `elm-format` on, for example elm-css based files, you can set a regex filter which will search the full filename (including the path to the file). If the regex matches, then it will not automatically run `elm-format` on the file when you save. For example, the following filter would prevent automatic `elm-format` on a file named `elm-css/src/Css/TopBar.elm`:
         `"elm_format_filename_filter": "elm-css/src/Css/.*\\.elm$"`
-- The _Tools_ menu item is blank or the _Elm_ menu item is greyed out and I cannot select it
-    1. Install the [SublimeREPL](https://packagecontrol.io/packages/SublimeREPL) package. The 'Elm' item will appear in the _Tools > SublimeREPL_ submenu.
 
 ## Learning
 
