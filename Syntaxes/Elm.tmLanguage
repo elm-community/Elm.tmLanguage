@@ -525,7 +525,7 @@
 		<key>module_name</key>
 		<dict>
 			<key>match</key>
-			<string>[A-Z][A-Za-z._']*</string>
+			<string>[A-Z][A-Za-z0-9._']*</string>
 			<key>name</key>
 			<string>support.other.module.elm</string>
 		</dict>
